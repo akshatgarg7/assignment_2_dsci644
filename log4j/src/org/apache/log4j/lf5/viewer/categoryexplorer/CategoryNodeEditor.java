@@ -21,7 +21,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.util.ArrayList;
 import java.util.Enumeration;
 
 import javax.swing.JCheckBox;
@@ -120,28 +119,10 @@ public class CategoryNodeEditor extends CategoryAbstractCellEditor {
   protected void showPropertiesDialog(CategoryNode node) {
     JOptionPane.showMessageDialog(
         _tree,
-        getDisplayedProperties(node),
+        node.getDisplayedProperties(),
         "Category Properties: " + node.getTitle(),
         JOptionPane.PLAIN_MESSAGE
     );
-  }
-
-  protected Object getDisplayedProperties(CategoryNode node) {
-    ArrayList result = new ArrayList();
-    result.add("Category: " + node.getTitle());
-    if (node.hasFatalRecords()) {
-      result.add("Contains at least one fatal LogRecord.");
-    }
-    if (node.hasFatalChildren()) {
-      result.add("Contains descendants with a fatal LogRecord.");
-    }
-    result.add("LogRecords in this category alone: " +
-        node.getNumberOfContainedRecords());
-    result.add("LogRecords in descendant categories: " +
-        node.getNumberOfRecordsFromChildren());
-    result.add("LogRecords in this category including descendants: " +
-        node.getTotalNumberOfRecords());
-    return result.toArray();
   }
 
   protected void showPopup(CategoryNode node, int x, int y) {

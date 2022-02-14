@@ -381,7 +381,27 @@ public abstract class LogRecord implements java.io.Serializable {
     _seqCount++;
     return _seqCount;
   }
-  //--------------------------------------------------------------------------
+
+    /**
+     * Check to see if the any records contain the search string.
+     * Searching now supports NDC messages and date.
+     * @param text
+     */
+    public boolean matches(String text) {
+      String message = getMessage();
+      String NDC = getNDC();
+
+      if (message == null && NDC == null || text == null) {
+        return false;
+      }
+      if (message.toLowerCase().indexOf(text.toLowerCase()) == -1 &&
+          NDC.toLowerCase().indexOf(text.toLowerCase()) == -1) {
+        return false;
+      }
+
+      return true;
+    }
+    //--------------------------------------------------------------------------
   //   Private Methods:
   //--------------------------------------------------------------------------
 

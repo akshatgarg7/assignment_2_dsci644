@@ -18,6 +18,7 @@ package org.apache.log4j.lf5.viewer.categoryexplorer;
 
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.TreeNode;
+import java.util.ArrayList;
 import java.util.Enumeration;
 
 /**
@@ -180,7 +181,25 @@ public class CategoryNode extends DefaultMutableTreeNode {
     }
     ((CategoryNode) parent).addRecordFromChild();
   }
-  //--------------------------------------------------------------------------
+
+    protected Object getDisplayedProperties() {
+      ArrayList result = new ArrayList();
+      result.add("Category: " + getTitle());
+      if (hasFatalRecords()) {
+        result.add("Contains at least one fatal LogRecord.");
+      }
+      if (hasFatalChildren()) {
+        result.add("Contains descendants with a fatal LogRecord.");
+      }
+      result.add("LogRecords in this category alone: " +
+          getNumberOfContainedRecords());
+      result.add("LogRecords in descendant categories: " +
+          getNumberOfRecordsFromChildren());
+      result.add("LogRecords in this category including descendants: " +
+          getTotalNumberOfRecords());
+      return result.toArray();
+    }
+    //--------------------------------------------------------------------------
   //   Private Methods:
   //--------------------------------------------------------------------------
 

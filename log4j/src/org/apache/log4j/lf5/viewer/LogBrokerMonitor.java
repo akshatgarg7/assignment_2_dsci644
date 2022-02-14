@@ -404,38 +404,19 @@ public class LogBrokerMonitor {
     int len = records.size();
 
     for (int i = startRow; i < len; i++) {
-      if (matches((LogRecord) records.get(i), searchText)) {
+      if (((LogRecord) records.get(i)).matches(searchText)) {
         return i; // found a record
       }
     }
     // wrap around to beginning if when we reach the end with no match
     len = startRow;
     for (int i = 0; i < len; i++) {
-      if (matches((LogRecord) records.get(i), searchText)) {
+      if (((LogRecord) records.get(i)).matches(searchText)) {
         return i; // found a record
       }
     }
     // nothing found
     return -1;
-  }
-
-  /**
-   * Check to see if the any records contain the search string.
-   * Searching now supports NDC messages and date.
-   */
-  protected boolean matches(LogRecord record, String text) {
-    String message = record.getMessage();
-    String NDC = record.getNDC();
-
-    if (message == null && NDC == null || text == null) {
-      return false;
-    }
-    if (message.toLowerCase().indexOf(text.toLowerCase()) == -1 &&
-        NDC.toLowerCase().indexOf(text.toLowerCase()) == -1) {
-      return false;
-    }
-
-    return true;
   }
 
   /**
