@@ -59,8 +59,8 @@ import java.util.Properties;
    @since 1.1
  */
 public class PropertySetter {
-  protected Object obj;
-  protected PropertyDescriptor[] props;
+  private PropertySetterProduct propertySetterProduct = new PropertySetterProduct();
+protected PropertyDescriptor[] props;
   
   /**
     Create a new PropertySetter for the specified Object. This is done
@@ -70,7 +70,7 @@ public class PropertySetter {
    */
   public
   PropertySetter(Object obj) {
-    this.obj = obj;
+    propertySetterProduct.setObj(obj);
   }
   
   /**
@@ -80,10 +80,10 @@ public class PropertySetter {
   protected
   void introspect() {
     try {
-      BeanInfo bi = Introspector.getBeanInfo(obj.getClass());
+      BeanInfo bi = Introspector.getBeanInfo(propertySetterProduct.getObj().getClass());
       props = bi.getPropertyDescriptors();
     } catch (IntrospectionException ex) {
-      LogLog.error("Failed to introspect "+obj+": " + ex.getMessage());
+      LogLog.error("Failed to introspect "+propertySetterProduct.getObj()+": " + ex.getMessage());
       props = new PropertyDescriptor[0];
     }
   }
@@ -113,63 +113,7 @@ public class PropertySetter {
    */
   public
   void setProperties(Properties properties, String prefix) {
-    int len = prefix.length();
-    
-    for (Enumeration e = properties.propertyNames(); e.hasMoreElements(); ) {
-      String key = (String) e.nextElement();
-      
-      // handle only properties that start with the desired frefix.
-      if (key.startsWith(prefix)) {
-
-	
-	// ignore key if it contains dots after the prefix
-        if (key.indexOf('.', len + 1) > 0) {
-	  //System.err.println("----------Ignoring---["+key
-	  //	     +"], prefix=["+prefix+"].");
-	  continue;
-	}
-        
-	String value = OptionConverter.findAndSubst(key, properties);
-        key = key.substring(len);
-        if (("layout".equals(key) || "errorhandler".equals(key)) && obj instanceof Appender) {
-          continue;
-        }
-        //
-        //   if the property type is an OptionHandler
-        //     (for example, triggeringPolicy of org.apache.log4j.rolling.RollingFileAppender)
-        PropertyDescriptor prop = getPropertyDescriptor(Introspector.decapitalize(key));
-        if (prop != null
-                && OptionHandler.class.isAssignableFrom(prop.getPropertyType())
-                && prop.getWriteMethod() != null) {
-            OptionHandler opt = (OptionHandler)
-                    OptionConverter.instantiateByKey(properties, prefix + key,
-                                  prop.getPropertyType(),
-                                  null);
-            PropertySetter setter = new PropertySetter(opt);
-            setter.setProperties(properties, prefix + key + ".");
-            try {
-                prop.getWriteMethod().invoke(this.obj, new Object[] { opt });
-            } catch(IllegalAccessException ex) {
-                LogLog.warn("Failed to set property [" + key +
-                            "] to value \"" + value + "\". ", ex);
-            } catch(InvocationTargetException ex) {
-                if (ex.getTargetException() instanceof InterruptedException
-                        || ex.getTargetException() instanceof InterruptedIOException) {
-                    Thread.currentThread().interrupt();
-                }
-                LogLog.warn("Failed to set property [" + key +
-                            "] to value \"" + value + "\". ", ex);
-            } catch(RuntimeException ex) {
-                LogLog.warn("Failed to set property [" + key +
-                            "] to value \"" + value + "\". ", ex);
-            }
-            continue;
-        }
-
-        setProperty(key, value);
-      }
-    }
-    activate();
+    propertySetterProduct.setProperties(properties, prefix, this);
   }
   
   /**
@@ -189,24 +133,11 @@ public class PropertySetter {
    */
   public
   void setProperty(String name, String value) {
-    if (value == null) return;
     
-    name = Introspector.decapitalize(name);
-    PropertyDescriptor prop = getPropertyDescriptor(name);
     
     //LogLog.debug("---------Key: "+name+", type="+prop.getPropertyType());
 
-    if (prop == null) {
-      LogLog.warn("No such property [" + name + "] in "+
-		  obj.getClass().getName()+"." );
-    } else {
-      try {
-        setProperty(prop, name, value);
-      } catch (PropertySetterException ex) {
-        LogLog.warn("Failed to set property [" + name +
-                    "] to value \"" + value + "\". ", ex.rootCause);
-      }
-    }
+    propertySetterProduct.setProperty(name, value, this);
   }
   
   /** 
@@ -220,40 +151,7 @@ public class PropertySetter {
   public
   void setProperty(PropertyDescriptor prop, String name, String value)
     throws PropertySetterException {
-    Method setter = prop.getWriteMethod();
-    if (setter == null) {
-      throw new PropertySetterException("No setter for property ["+name+"].");
-    }
-    Class[] paramTypes = setter.getParameterTypes();
-    if (paramTypes.length != 1) {
-      throw new PropertySetterException("#params for setter != 1");
-    }
-    
-    Object arg;
-    try {
-      arg = convertArg(value, paramTypes[0]);
-    } catch (Throwable t) {
-      throw new PropertySetterException("Conversion to type ["+paramTypes[0]+
-					"] failed. Reason: "+t);
-    }
-    if (arg == null) {
-      throw new PropertySetterException(
-          "Conversion to type ["+paramTypes[0]+"] failed.");
-    }
-    LogLog.debug("Setting property [" + name + "] to [" +arg+"].");
-    try {
-      setter.invoke(obj, new Object[]  { arg });
-    } catch (IllegalAccessException ex) {
-      throw new PropertySetterException(ex);
-    } catch (InvocationTargetException ex) {
-        if (ex.getTargetException() instanceof InterruptedException
-                || ex.getTargetException() instanceof InterruptedIOException) {
-            Thread.currentThread().interrupt();
-        }        
-        throw new PropertySetterException(ex);
-    } catch (RuntimeException ex) {
-      throw new PropertySetterException(ex);
-    }
+    propertySetterProduct.setProperty(prop, name, value);
   }
   
 
@@ -263,29 +161,7 @@ public class PropertySetter {
   */
   protected
   Object convertArg(String val, Class type) {
-    if(val == null)
-      return null;
-
-    String v = val.trim();
-    if (String.class.isAssignableFrom(type)) {
-      return val;
-    } else if (Integer.TYPE.isAssignableFrom(type)) {
-      return new Integer(v);
-    } else if (Long.TYPE.isAssignableFrom(type)) {
-      return new Long(v);
-    } else if (Boolean.TYPE.isAssignableFrom(type)) {
-      if ("true".equalsIgnoreCase(v)) {
-        return Boolean.TRUE;
-      } else if ("false".equalsIgnoreCase(v)) {
-        return Boolean.FALSE;
-      }
-    } else if (Priority.class.isAssignableFrom(type)) {
-      return OptionConverter.toLevel(v, (Level) Level.DEBUG);
-    } else if (ErrorHandler.class.isAssignableFrom(type)) {
-      return OptionConverter.instantiateByClassName(v, 
-	  ErrorHandler.class, null);
-    }
-    return null;
+    return propertySetterProduct.convertArg(val, type);
   }
   
   
@@ -303,8 +179,6 @@ public class PropertySetter {
   
   public
   void activate() {
-    if (obj instanceof OptionHandler) {
-      ((OptionHandler) obj).activateOptions();
-    }
+    propertySetterProduct.activate();
   }
 }
