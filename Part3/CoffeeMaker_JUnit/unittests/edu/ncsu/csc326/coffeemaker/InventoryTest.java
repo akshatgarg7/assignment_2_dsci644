@@ -1,6 +1,7 @@
 package edu.ncsu.csc326.coffeemaker;
 
 import edu.ncsu.csc326.coffeemaker.exceptions.InventoryException;
+import edu.ncsu.csc326.coffeemaker.exceptions.RecipeException;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -257,5 +258,136 @@ class InventoryTest {
         } catch (InventoryException e) {
             //success if caught
         }
+    }
+
+    @Test
+    public void testEnoughIngredients(){
+        Inventory inventory = new Inventory();
+        Recipe recipe = new Recipe();
+        assertTrue(inventory.enoughIngredients(recipe));
+    }
+
+    @Test
+    public void testEnoughIngredientsFail1(){
+        try {
+            Inventory inventory = new Inventory();
+            Recipe recipe = new Recipe();
+            recipe.setAmtChocolate("50");
+            assertFalse(inventory.enoughIngredients(recipe));
+        } catch (RecipeException ignored) {
+        }
+    }
+
+    @Test
+    public void testEnoughIngredientsFail2(){
+        try {
+            Inventory inventory = new Inventory();
+            Recipe recipe = new Recipe();
+            recipe.setAmtCoffee("50");
+            assertFalse(inventory.enoughIngredients(recipe));
+        } catch (RecipeException ignored) {
+        }
+    }
+
+    @Test
+    public void testEnoughIngredientsFail3(){
+        try {
+            Inventory inventory = new Inventory();
+            Recipe recipe = new Recipe();
+            recipe.setAmtSugar("50");
+            assertFalse(inventory.enoughIngredients(recipe));
+        } catch (RecipeException ignored) {
+        }
+    }
+
+    @Test
+    public void testEnoughIngredientsFail4(){
+        try {
+            Inventory inventory = new Inventory();
+            Recipe recipe = new Recipe();
+            recipe.setAmtMilk("50");
+            assertFalse(inventory.enoughIngredients(recipe));
+        } catch (RecipeException ignored) {
+        }
+    }
+
+    @Test
+    public void testUseIngredientsFail(){
+        try {
+            Inventory inventory = new Inventory();
+            Recipe recipe = new Recipe();
+            recipe.setAmtCoffee("50");
+            recipe.setAmtMilk("50");
+            recipe.setAmtSugar("50");
+            recipe.setAmtChocolate("50");
+            assertFalse(inventory.useIngredients(recipe));
+        } catch (RecipeException ignored) {
+        }
+    }
+
+    @Test
+    public void testUseIngredientsCoffee(){
+        try {
+            Inventory inventory = new Inventory();
+            Recipe recipe = new Recipe();
+            recipe.setAmtCoffee("10");
+            recipe.setAmtMilk("10");
+            recipe.setAmtSugar("10");
+            recipe.setAmtChocolate("10");
+            inventory.useIngredients(recipe);
+            assertEquals(5,inventory.getCoffee());
+        } catch (RecipeException ignored) {
+        }
+    }
+
+    @Test
+    public void testUseIngredientsMilk(){
+        try {
+            Inventory inventory = new Inventory();
+            Recipe recipe = new Recipe();
+            recipe.setAmtCoffee("10");
+            recipe.setAmtMilk("10");
+            recipe.setAmtSugar("10");
+            recipe.setAmtChocolate("10");
+            inventory.useIngredients(recipe);
+            assertEquals(5,inventory.getMilk());
+        } catch (RecipeException ignored) {
+        }
+    }
+
+    @Test
+    public void testUseIngredientsSugar(){
+        try {
+            Inventory inventory = new Inventory();
+            Recipe recipe = new Recipe();
+            recipe.setAmtCoffee("10");
+            recipe.setAmtMilk("10");
+            recipe.setAmtSugar("10");
+            recipe.setAmtChocolate("10");
+            inventory.useIngredients(recipe);
+            assertEquals(5,inventory.getSugar());
+        } catch (RecipeException ignored) {
+        }
+    }
+
+    @Test
+    public void testUseIngredientsChocolate(){
+        try {
+            Inventory inventory = new Inventory();
+            Recipe recipe = new Recipe();
+            recipe.setAmtCoffee("10");
+            recipe.setAmtMilk("10");
+            recipe.setAmtSugar("10");
+            recipe.setAmtChocolate("10");
+            inventory.useIngredients(recipe);
+            assertEquals(5,inventory.getChocolate());
+        } catch (RecipeException ignored) {
+        }
+    }
+
+    @Test
+    public void testToString() {
+        Inventory inventory = new Inventory();
+        assertEquals("Coffee: 15\nMilk: 15\nSugar: 15\nChocolate: 15\n", inventory.toString());
     }
 }
