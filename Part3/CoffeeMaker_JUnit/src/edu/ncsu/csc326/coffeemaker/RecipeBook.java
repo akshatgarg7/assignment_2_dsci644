@@ -57,12 +57,12 @@ public class RecipeBook {
 	 * @return String
 	 */
 	public synchronized String deleteRecipe(int recipeToDelete) {
-		if(recipeToDelete > NUM_RECIPES){
+		if(recipeToDelete >= NUM_RECIPES || recipeToDelete < 0){
 			throw new ArrayIndexOutOfBoundsException("RecipeBook only holds upto 4 recipes");
 		}
 		if (recipeArray[recipeToDelete] != null) {
 			String recipeName = recipeArray[recipeToDelete].getName();
-			recipeArray[recipeToDelete] = new Recipe();
+			recipeArray[recipeToDelete] = null;
 			return recipeName;
 		} else {
 			return null;
@@ -77,7 +77,7 @@ public class RecipeBook {
 	 * @return String
 	 */
 	public synchronized String editRecipe(int recipeToEdit, Recipe newRecipe) {
-		if(recipeToEdit > NUM_RECIPES){
+		if(recipeToEdit >= NUM_RECIPES || recipeToEdit < 0){
 			throw new ArrayIndexOutOfBoundsException("RecipeBook only holds upto 4 recipes");
 		}
 		if (recipeArray[recipeToEdit] != null) {

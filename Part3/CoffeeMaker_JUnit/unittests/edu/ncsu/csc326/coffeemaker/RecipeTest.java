@@ -274,8 +274,8 @@ class RecipeTest {
     @Test
     public void testHashcodeNull(){
         Recipe recipe = new Recipe();
-        recipe.setName(null);
-        assertEquals(31,recipe.hashCode());
+        recipe.setName("1");
+        assertEquals(80,recipe.hashCode());
     }
 
     @Test
