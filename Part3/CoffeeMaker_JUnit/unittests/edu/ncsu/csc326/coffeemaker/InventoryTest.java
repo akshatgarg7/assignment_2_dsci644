@@ -132,4 +132,67 @@ class InventoryTest {
             //success if caught
         }
     }
+
+    @Test
+    public void testDefaultGetMilk(){
+        Inventory inventory = new Inventory();
+        int milkDefault = 15;
+        int actual = inventory.getMilk();
+        assertEquals(milkDefault,actual);
+    }
+
+    @Test
+    public void testSetMilk(){
+        Inventory inventory = new Inventory();
+        int milkSet = 50;
+        inventory.setMilk(milkSet);
+        int actual = inventory.getMilk();
+        assertEquals(milkSet,actual);
+    }
+
+    @Test
+    public void testSetMilkLess(){
+        Inventory inventory = new Inventory();
+        int milkSet = -5;
+        inventory.setMilk(milkSet);
+        int actual = inventory.getMilk();
+        assertEquals(15,actual);
+    }
+
+    @Test
+    public void testAddMilk(){
+        try {
+            Inventory inventory = new Inventory();
+            String milkAdd = "50";
+            inventory.addMilk(milkAdd);
+            int actual = inventory.getMilk();
+            assertEquals(65,actual);
+        } catch (InventoryException e) {
+            fail("Something very wrong happened with code!");
+        }
+    }
+
+    @Test
+    public void testAddMilkException(){
+        try {
+            Inventory inventory = new Inventory();
+            String milkAdd = "a";
+            inventory.addMilk(milkAdd);
+            fail("Units of coffee must be a integer");
+        } catch (InventoryException e) {
+            //success if caught
+        }
+    }
+
+    @Test
+    public void testAddMilkNeg(){
+        try {
+            Inventory inventory = new Inventory();
+            String milkAdd = "-5";
+            inventory.addMilk(milkAdd);
+            fail("Units of chocolate must be a positive integer");
+        } catch (InventoryException e) {
+            //success if caught
+        }
+    }
 }
