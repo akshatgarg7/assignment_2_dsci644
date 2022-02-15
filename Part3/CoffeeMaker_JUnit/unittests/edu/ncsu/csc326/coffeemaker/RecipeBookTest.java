@@ -107,6 +107,28 @@ class RecipeBookTest {
     }
 
     @Test
+    public void testDeleteArrayOutofBoundNeg(){
+        try {
+            RecipeBook recipeBook = new RecipeBook();
+            Recipe r1 = new Recipe();
+            r1.setName("a");
+            Recipe r2 = new Recipe();
+            r2.setName("b");
+            Recipe r3 = new Recipe();
+            r3.setName("c");
+            Recipe r4 = new Recipe();
+            r4.setName("d");
+            recipeBook.addRecipe(r1);
+            recipeBook.addRecipe(r2);
+            recipeBook.addRecipe(r3);
+            recipeBook.addRecipe(r4);
+            recipeBook.deleteRecipe(-5);
+        } catch (Throwable e){
+            assertTrue(e instanceof IndexOutOfBoundsException);
+        }
+    }
+
+    @Test
     public void testDeleteArrayCheck(){
         RecipeBook recipeBook = new RecipeBook();
         Recipe r1 = new Recipe();
@@ -166,6 +188,28 @@ class RecipeBookTest {
             recipeBook.addRecipe(r3);
             recipeBook.addRecipe(r4);
             recipeBook.editRecipe(5,new Recipe());
+        } catch (Throwable e){
+            assertTrue(e instanceof IndexOutOfBoundsException);
+        }
+    }
+
+    @Test
+    public void testEditArrayOutofBoundNeg(){
+        try {
+            RecipeBook recipeBook = new RecipeBook();
+            Recipe r1 = new Recipe();
+            r1.setName("a");
+            Recipe r2 = new Recipe();
+            r2.setName("b");
+            Recipe r3 = new Recipe();
+            r3.setName("c");
+            Recipe r4 = new Recipe();
+            r4.setName("d");
+            recipeBook.addRecipe(r1);
+            recipeBook.addRecipe(r2);
+            recipeBook.addRecipe(r3);
+            recipeBook.addRecipe(r4);
+            recipeBook.editRecipe(-5,new Recipe());
         } catch (Throwable e){
             assertTrue(e instanceof IndexOutOfBoundsException);
         }
