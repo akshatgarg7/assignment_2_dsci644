@@ -1,0 +1,34 @@
+{
+    "ents": {
+        "@l./src/gr/uom/java/xmi/UMLAbstractClass.java": [
+            "new"
+        ],
+        "@l./src/gr/uom/java/xmi/UMLAttribute.java": [
+            "new"
+        ],
+        "@l./src/gr/uom/java/xmi/UMLOperation.java": [
+            "new"
+        ],
+        "@l./src/gr/uom/java/xmi/VariableDeclarationContainer.java": [
+            "new"
+        ],
+        "@l./src/gr/uom/java/xmi/decomposition/LeafMapping.java": [
+            "new"
+        ],
+        "@l./src/gr/uom/java/xmi/decomposition/UMLOperationBodyMapper.java": [
+            "new"
+        ],
+        "@l./src/gr/uom/java/xmi/diff/MergeClassRefactoring.java": [
+            "new"
+        ],
+        "@l./src/gr/uom/java/xmi/diff/ReplaceAnonymousWithLambdaRefactoring.java": [
+            "new"
+        ],
+        "@l./src/gr/uom/java/xmi/diff/ReplaceLoopWithPipelineRefactoring.java": [
+            "new"
+        ],
+        "@l./src/gr/uom/java/xmi/diff/UMLClassDiff.java": [
+            "new"
+        ]
+    }
+}

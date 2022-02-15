@@ -1,0 +1,462 @@
+Kind,Name,CountClassCoupled,CountDeclMethodAll,CountDeclInstanceMethod,MaxInheritanceTree,PercentLackOfCohesion,CountClassDerived
+File,"AbstractCall.java",,,50,,,
+File,"AbstractCodeFragment.java",,,40,,,
+File,"AbstractCodeMapping.java",,,35,,,
+File,"AbstractExpression.java",,,30,,,
+File,"AbstractStatement.java",,,7,,,
+File,"AddAttributeAnnotationRefactoring.java",,,13,,,
+File,"AddAttributeModifierRefactoring.java",,,13,,,
+File,"AddClassAnnotationRefactoring.java",,,13,,,
+File,"AddClassModifierRefactoring.java",,,13,,,
+File,"AddMethodAnnotationRefactoring.java",,,13,,,
+File,"AddMethodModifierRefactoring.java",,,13,,,
+File,"AddParameterRefactoring.java",,,13,,,
+File,"AddThrownExceptionTypeRefactoring.java",,,13,,,
+File,"AddVariableAnnotationRefactoring.java",,,16,,,
+File,"AddVariableModifierRefactoring.java",,,16,,,
+File,"AddVariableReplacement.java",,,2,,,
+File,"AnonymousClassDeclarationObject.java",,,25,,,
+File,"AnonymousClassDeclarationVisitor.java",,,2,,,
+File,"AstUtils.java",,,3,,,
+File,"CallTree.java",,,3,,,
+File,"CallTreeNode.java",,,11,,,
+File,"CandidateAttributeRefactoring.java",,,18,,,
+File,"CandidateExtractClassRefactoring.java",,,6,,,
+File,"CandidateMergeVariableRefactoring.java",,,13,,,
+File,"CandidateSplitVariableRefactoring.java",,,13,,,
+File,"ChangeAttributeAccessModifierRefactoring.java",,,14,,,
+File,"ChangeAttributeTypeRefactoring.java",,,17,,,
+File,"ChangeClassAccessModifierRefactoring.java",,,14,,,
+File,"ChangeOperationAccessModifierRefactoring.java",,,14,,,
+File,"ChangeReturnTypeRefactoring.java",,,15,,,
+File,"ChangeThrownExceptionTypeRefactoring.java",,,14,,,
+File,"ChangeTypeDeclarationKindRefactoring.java",,,14,,,
+File,"ChangeVariableTypeRefactoring.java",,,18,,,
+File,"Churn.java",,,4,,,
+File,"ClassInstanceCreationWithMethodInvocationReplacement.java",,,3,,,
+File,"ClassMoveComparator.java",,,1,,,
+File,"ClassRenameComparator.java",,,1,,,
+File,"CodeRange.java",,,18,,,
+File,"CodeRangeProvider.java",,,2,,,
+File,"CollapseHierarchyRefactoring.java",,,12,,,
+File,"CompositeReplacement.java",,,4,,,
+File,"CompositeStatementObject.java",,,46,,,
+File,"CompositeStatementObjectMapping.java",,,2,,,
+File,"CompositeType.java",,,8,,,
+File,"ConsistentReplacementDetector.java",,,0,,,
+File,"ConvertAnonymousClassToTypeRefactoring.java",,,10,,,
+File,"EncapsulateAttributeRefactoring.java",,,14,,,
+File,"ExternalProcess.java",,,3,,,
+File,"ExtractAttributeRefactoring.java",,,17,,,
+File,"ExtractClassRefactoring.java",,,13,,,
+File,"ExtractOperationDetection.java",,,12,,,
+File,"ExtractOperationRefactoring.java",,,24,,,
+File,"ExtractSuperclassRefactoring.java",,,11,,,
+File,"ExtractVariableRefactoring.java",,,17,,,
+File,"GHRepositoryWrapper.java",,,3,,,
+File,"GHRepositoryWrapperTest.java",,,2,,,
+File,"GitHistoryRefactoringMiner.java",,,10,,,
+File,"GitHistoryRefactoringMinerImpl.java",,,35,,,
+File,"GitService.java",,,12,,,
+File,"GitServiceImpl.java",,,21,,,
+File,"InheritanceDetection.java",,,4,,,
+File,"InlineOperationDetection.java",,,8,,,
+File,"InlineOperationRefactoring.java",,,22,,,
+File,"InlineVariableRefactoring.java",,,17,,,
+File,"IntersectionReplacement.java",,,2,,,
+File,"LambdaExpressionObject.java",,,13,,,
+File,"LeafMapping.java",,,7,,,
+File,"LeafType.java",,,11,,,
+File,"ListCompositeType.java",,,11,,,
+File,"LocationInfo.java",,,22,,,
+File,"LocationInfoProvider.java",,,2,,,
+File,"MergeAttributeRefactoring.java",,,16,,,
+File,"MergeClassRefactoring.java",,,17,,,
+File,"MergePackageRefactoring.java",,,10,,,
+File,"MergeVariableRefactoring.java",,,17,,,
+File,"MergeVariableReplacement.java",,,5,,,
+File,"MethodInvocationReplacement.java",,,6,,,
+File,"MethodInvocationWithClassInstanceCreationReplacement.java",,,3,,,
+File,"MethodReference.java",,,13,,,
+File,"ModifyAttributeAnnotationRefactoring.java",,,14,,,
+File,"ModifyClassAnnotationRefactoring.java",,,14,,,
+File,"ModifyMethodAnnotationRefactoring.java",,,14,,,
+File,"ModifyVariableAnnotationRefactoring.java",,,17,,,
+File,"MoveAndRenameAttributeRefactoring.java",,,6,,,
+File,"MoveAndRenameClassRefactoring.java",,,15,,,
+File,"MoveAttributeRefactoring.java",,,16,,,
+File,"MoveClassRefactoring.java",,,15,,,
+File,"MoveOperationRefactoring.java",,,19,,,
+File,"MoveSourceFolderRefactoring.java",,,14,,,
+File,"MovedClassToAnotherSourceFolder.java",,,6,,,
+File,"ObjectCreation.java",,,15,,,
+File,"ObjectCreationReplacement.java",,,3,,,
+File,"OperationBody.java",,,18,,,
+File,"OperationInvocation.java",,,26,,,
+File,"PackageLevelRefactoring.java",,,5,,,
+File,"PrefixSuffixUtils.java",,,0,,,
+File,"PullUpAttributeRefactoring.java",,,4,,,
+File,"PullUpOperationRefactoring.java",,,4,,,
+File,"PushDownAttributeRefactoring.java",,,4,,,
+File,"PushDownOperationRefactoring.java",,,4,,,
+File,"RefFinderResultReader.java",,,4,,,
+File,"Refactoring.java",,,6,,,
+File,"RefactoringCollector.java",,,4,,,
+File,"RefactoringCrawlerRefactoring.java",,,6,,,
+File,"RefactoringCrawlerResultReader.java",,,0,,,
+File,"RefactoringHandler.java",,,4,,,
+File,"RefactoringMiner.java",,,15,,,
+File,"RefactoringMinerHttpServer.java",,,2,,,
+File,"RefactoringMinerHttpsServer.java",,,3,,,
+File,"RefactoringMinerTimedOutException.java",,,0,,,
+File,"RefactoringPopulator.java",,,8,,,
+File,"RefactoringRelationship.java",,,16,,,
+File,"RefactoringRelationshipGroup.java",,,6,,,
+File,"RefactoringSet.java",,,13,,,
+File,"RefactoringType.java",,,8,,,
+File,"RemoveAttributeAnnotationRefactoring.java",,,13,,,
+File,"RemoveAttributeModifierRefactoring.java",,,13,,,
+File,"RemoveClassAnnotationRefactoring.java",,,13,,,
+File,"RemoveClassModifierRefactoring.java",,,13,,,
+File,"RemoveMethodAnnotationRefactoring.java",,,13,,,
+File,"RemoveMethodModifierRefactoring.java",,,13,,,
+File,"RemoveParameterRefactoring.java",,,13,,,
+File,"RemoveThrownExceptionTypeRefactoring.java",,,13,,,
+File,"RemoveVariableAnnotationRefactoring.java",,,16,,,
+File,"RemoveVariableModifierRefactoring.java",,,16,,,
+File,"RenameAttributeRefactoring.java",,,15,,,
+File,"RenameClassRefactoring.java",,,14,,,
+File,"RenameOperationRefactoring.java",,,19,,,
+File,"RenamePackageRefactoring.java",,,14,,,
+File,"RenamePattern.java",,,7,,,
+File,"RenameVariableRefactoring.java",,,16,,,
+File,"ReorderParameterRefactoring.java",,,14,,,
+File,"ReplaceAnonymousWithLambdaRefactoring.java",,,15,,,
+File,"ReplaceAttributeRefactoring.java",,,6,,,
+File,"ReplaceLoopWithPipelineRefactoring.java",,,14,,,
+File,"Replacement.java",,,12,,,
+File,"ReplacementUtil.java",,,0,,,
+File,"ResultComparator.java",,,34,,,
+File,"SplitAttributeRefactoring.java",,,16,,,
+File,"SplitPackageRefactoring.java",,,13,,,
+File,"SplitVariableRefactoring.java",,,17,,,
+File,"SplitVariableReplacement.java",,,5,,,
+File,"StatementObject.java",,,27,,,
+File,"StringDistance.java",,,0,,,
+File,"SwapArgumentReplacement.java",,,1,,,
+File,"TernaryOperatorExpression.java",,,7,,,
+File,"TestAllRefactorings.java",,,1,,,
+File,"TestBuilder.java",,,26,,,
+File,"TryStatementObject.java",,,6,,,
+File,"UMLAbstractClass.java",,,48,,,
+File,"UMLAbstractClassDiff.java",,,15,,,
+File,"UMLAnnotation.java",,,14,,,
+File,"UMLAnnotationDiff.java",,,4,,,
+File,"UMLAnnotationListDiff.java",,,5,,,
+File,"UMLAnonymousClass.java",,,11,,,
+File,"UMLAnonymousClassDiff.java",,,9,,,
+File,"UMLAttribute.java",,,45,,,
+File,"UMLAttributeDiff.java",,,22,,,
+File,"UMLClass.java",,,54,,,
+File,"UMLClassBaseDiff.java",,,103,,,
+File,"UMLClassDiff.java",,,14,,,
+File,"UMLClassMatcher.java",,,14,,,
+File,"UMLClassMergeDiff.java",,,3,,,
+File,"UMLClassMoveDiff.java",,,5,,,
+File,"UMLClassRenameDiff.java",,,4,,,
+File,"UMLComment.java",,,5,,,
+File,"UMLEnumConstant.java",,,6,,,
+File,"UMLEnumConstantDiff.java",,,8,,,
+File,"UMLGeneralization.java",,,6,,,
+File,"UMLGeneralizationDiff.java",,,5,,,
+File,"UMLJavadoc.java",,,8,,,
+File,"UMLModel.java",,,13,,,
+File,"UMLModelASTReader.java",,,23,,,
+File,"UMLModelDiff.java",,,120,,,
+File,"UMLOperation.java",,,99,,,
+File,"UMLOperationBodyMapper.java",,,142,,,
+File,"UMLOperationBodyMapperComparator.java",,,1,,,
+File,"UMLOperationDiff.java",,,17,,,
+File,"UMLParameter.java",,,16,,,
+File,"UMLParameterDiff.java",,,11,,,
+File,"UMLRealization.java",,,6,,,
+File,"UMLRealizationDiff.java",,,3,,,
+File,"UMLTagElement.java",,,8,,,
+File,"UMLType.java",,,23,,,
+File,"UMLTypeParameter.java",,,10,,,
+File,"VariableDeclaration.java",,,28,,,
+File,"VariableDeclarationContainer.java",,,12,,,
+File,"VariableDeclarationProvider.java",,,1,,,
+File,"VariableDeclarationReplacement.java",,,9,,,
+File,"VariableReferenceExtractor.java",,,0,,,
+File,"VariableReplacementAnalysis.java",,,62,,,
+File,"VariableReplacementWithMethodInvocation.java",,,5,,,
+File,"VariableScope.java",,,14,,,
+File,"Visitor.java",,,62,,,
+File,"WildcardType.java",,,6,,,
+Package,"gr",,,0,,,
+Package,"gr.uom",,,0,,,
+Package,"gr.uom.java",,,0,,,
+Package,"gr.uom.java.xmi",,,484,,,
+Public Class,"gr.uom.java.xmi.AnonymousClassDeclarationVisitor",3,2,2,2,0,0
+Public Class,"gr.uom.java.xmi.CompositeType",3,36,8,2,18,0
+Public Class,"gr.uom.java.xmi.LeafType",4,41,11,2,71,0
+Public Class,"gr.uom.java.xmi.ListCompositeType",6,36,8,2,18,0
+Public Enum Type,"gr.uom.java.xmi.ListCompositeType.Kind",1,3,3,1,,0
+Public Class,"gr.uom.java.xmi.LocationInfo",6,16,16,1,70,0
+Public Enum Type,"gr.uom.java.xmi.LocationInfo.CodeElementType",1,6,6,1,,0
+Public Interface,"gr.uom.java.xmi.LocationInfoProvider",2,2,2,0,0,12
+Public Abstract Class,"gr.uom.java.xmi.UMLAbstractClass",24,48,48,1,85,2
+Public Class,"gr.uom.java.xmi.UMLAnnotation",16,14,14,1,57,0
+Public Class,"gr.uom.java.xmi.UMLAnonymousClass",2,59,11,2,81,0
+Public Class,"gr.uom.java.xmi.UMLAttribute",22,45,45,1,90,1
+Public Class,"gr.uom.java.xmi.UMLClass",15,102,54,2,93,0
+Public Interface,"gr.uom.java.xmi.UMLClassMatcher",2,1,1,0,0,6
+Public Static Class,"gr.uom.java.xmi.UMLClassMatcher.ExtremelyRelaxedMove",3,1,1,1,0,0
+Public Static Class,"gr.uom.java.xmi.UMLClassMatcher.ExtremelyRelaxedRename",3,1,1,1,0,0
+Public Class,"gr.uom.java.xmi.UMLClassMatcher.MatchResult",0,7,7,1,68,0
+Public Static Class,"gr.uom.java.xmi.UMLClassMatcher.Move",3,1,1,1,0,0
+Public Static Class,"gr.uom.java.xmi.UMLClassMatcher.RelaxedMove",3,1,1,1,0,0
+Public Static Class,"gr.uom.java.xmi.UMLClassMatcher.RelaxedRename",3,1,1,1,0,0
+Public Static Class,"gr.uom.java.xmi.UMLClassMatcher.Rename",3,1,1,1,0,0
+Public Class,"gr.uom.java.xmi.UMLComment",5,5,5,1,30,0
+Public Class,"gr.uom.java.xmi.UMLEnumConstant",6,51,6,2,33,0
+Public Class,"gr.uom.java.xmi.UMLGeneralization",2,6,6,1,33,0
+Public Class,"gr.uom.java.xmi.UMLJavadoc",6,8,8,1,43,0
+Public Class,"gr.uom.java.xmi.UMLModel",17,13,13,1,70,0
+Public Class,"gr.uom.java.xmi.UMLModelASTReader",72,24,23,1,87,0
+Public Class,"gr.uom.java.xmi.UMLOperation",29,100,99,1,94,0
+Public Class,"gr.uom.java.xmi.UMLParameter",4,16,16,1,56,0
+Public Class,"gr.uom.java.xmi.UMLRealization",2,6,6,1,33,0
+Public Class,"gr.uom.java.xmi.UMLTagElement",4,8,8,1,31,0
+Public Abstract Class,"gr.uom.java.xmi.UMLType",25,28,23,1,79,4
+Public Class,"gr.uom.java.xmi.UMLTypeParameter",7,10,10,1,53,0
+Public Interface,"gr.uom.java.xmi.VariableDeclarationContainer",9,14,12,1,0,2
+Public Interface,"gr.uom.java.xmi.VariableDeclarationProvider",1,1,1,0,0,3
+Public Class,"gr.uom.java.xmi.WildcardType",3,34,6,2,8,0
+Package,"gr.uom.java.xmi.decomposition",,,676,,,
+Public Abstract Class,"gr.uom.java.xmi.decomposition.AbstractCall",22,49,48,1,92,3
+Public Enum Type,"gr.uom.java.xmi.decomposition.AbstractCall.StatementCoverageType",1,2,2,1,,0
+Public Abstract Class,"gr.uom.java.xmi.decomposition.AbstractCodeFragment",17,42,40,1,85,2
+Public Abstract Class,"gr.uom.java.xmi.decomposition.AbstractCodeMapping",30,35,35,1,80,2
+Public Class,"gr.uom.java.xmi.decomposition.AbstractExpression",13,72,30,2,92,0
+Public Abstract Class,"gr.uom.java.xmi.decomposition.AbstractStatement",4,49,7,2,25,2
+Public Class,"gr.uom.java.xmi.decomposition.AnonymousClassDeclarationObject",15,25,25,1,95,0
+Public Class,"gr.uom.java.xmi.decomposition.CompositeStatementObject",25,95,46,3,75,1
+Public Class,"gr.uom.java.xmi.decomposition.CompositeStatementObjectMapping",6,37,2,2,0,0
+Public Class,"gr.uom.java.xmi.decomposition.LambdaExpressionObject",20,13,13,1,64,0
+Public Class,"gr.uom.java.xmi.decomposition.LeafMapping",19,43,7,2,0,0
+Public Class,"gr.uom.java.xmi.decomposition.MethodReference",13,62,13,2,65,0
+Public Class,"gr.uom.java.xmi.decomposition.ObjectCreation",12,64,15,2,71,0
+Public Class,"gr.uom.java.xmi.decomposition.OperationBody",46,18,18,1,76,0
+Public Class,"gr.uom.java.xmi.decomposition.OperationInvocation",35,81,26,2,89,0
+Public Class,"gr.uom.java.xmi.decomposition.ReplacementUtil",6,11,0,1,0,0
+Public Class,"gr.uom.java.xmi.decomposition.StatementObject",21,76,27,3,92,0
+Public Class,"gr.uom.java.xmi.decomposition.TernaryOperatorExpression",7,7,7,1,71,0
+Public Class,"gr.uom.java.xmi.decomposition.TryStatementObject",6,101,6,4,58,0
+Public Class,"gr.uom.java.xmi.decomposition.UMLOperationBodyMapper",88,134,132,1,93,0
+Private Static Class,"gr.uom.java.xmi.decomposition.UMLOperationBodyMapper.ReplacementInfo",8,10,10,1,71,0
+Public Class,"gr.uom.java.xmi.decomposition.UMLOperationBodyMapperComparator",2,1,1,1,0,0
+Public Class,"gr.uom.java.xmi.decomposition.VariableDeclaration",29,31,28,1,82,0
+Public Class,"gr.uom.java.xmi.decomposition.VariableReferenceExtractor",14,5,0,1,0,0
+Public Class,"gr.uom.java.xmi.decomposition.VariableReplacementAnalysis",70,67,62,1,91,0
+Public Class,"gr.uom.java.xmi.decomposition.VariableScope",8,14,14,1,72,0
+Public Class,"gr.uom.java.xmi.decomposition.Visitor",63,67,62,2,90,0
+Package,"gr.uom.java.xmi.decomposition.replacement",,,60,,,
+Public Class,"gr.uom.java.xmi.decomposition.replacement.AddVariableReplacement",2,12,2,2,0,0
+Public Class,"gr.uom.java.xmi.decomposition.replacement.ClassInstanceCreationWithMethodInvocationReplacement",4,13,3,2,33,0
+Public Class,"gr.uom.java.xmi.decomposition.replacement.CompositeReplacement",3,14,4,2,25,0
+Public Class,"gr.uom.java.xmi.decomposition.replacement.ConsistentReplacementDetector",7,8,0,1,0,0
+TypeVariable,"gr.uom.java.xmi.decomposition.replacement.ConsistentReplacementDetector.allRenamesHaveIdenticalTypeAndInitializer.T",0,0,0,2,0,0
+TypeVariable,"gr.uom.java.xmi.decomposition.replacement.ConsistentReplacementDetector.filter.T",0,0,0,2,0,0
+TypeVariable,"gr.uom.java.xmi.decomposition.replacement.ConsistentReplacementDetector.identicalTypeAndInitializer.T",0,0,0,2,0,0
+TypeVariable,"gr.uom.java.xmi.decomposition.replacement.ConsistentReplacementDetector.inconsistentRenames.T",0,0,0,2,0,0
+TypeVariable,"gr.uom.java.xmi.decomposition.replacement.ConsistentReplacementDetector.involvesOnlyAttributes.T",0,0,0,2,0,0
+TypeVariable,"gr.uom.java.xmi.decomposition.replacement.ConsistentReplacementDetector.updateRenames.T",0,0,0,2,0,0
+TypeVariable,"gr.uom.java.xmi.decomposition.replacement.ConsistentReplacementDetector.updateRenames.T",0,0,0,2,0,0
+TypeVariable,"gr.uom.java.xmi.decomposition.replacement.ConsistentReplacementDetector.validInconsistencies.T",0,0,0,2,0,0
+Public Class,"gr.uom.java.xmi.decomposition.replacement.IntersectionReplacement",3,12,2,2,0,0
+Public Class,"gr.uom.java.xmi.decomposition.replacement.MergeVariableReplacement",4,15,5,2,0,0
+Public Class,"gr.uom.java.xmi.decomposition.replacement.MethodInvocationReplacement",5,16,6,2,16,0
+Public Class,"gr.uom.java.xmi.decomposition.replacement.MethodInvocationWithClassInstanceCreationReplacement",4,13,3,2,33,0
+Public Class,"gr.uom.java.xmi.decomposition.replacement.ObjectCreationReplacement",3,13,3,2,33,0
+Public Class,"gr.uom.java.xmi.decomposition.replacement.Replacement",4,10,10,1,46,20
+Public Enum Type,"gr.uom.java.xmi.decomposition.replacement.Replacement.ReplacementType",1,2,2,1,,0
+Public Class,"gr.uom.java.xmi.decomposition.replacement.SplitVariableReplacement",4,15,5,2,0,0
+Public Class,"gr.uom.java.xmi.decomposition.replacement.SwapArgumentReplacement",2,11,1,2,0,0
+Public Class,"gr.uom.java.xmi.decomposition.replacement.VariableDeclarationReplacement",7,19,9,2,55,0
+Public Class,"gr.uom.java.xmi.decomposition.replacement.VariableReplacementWithMethodInvocation",4,13,3,2,33,0
+Public Enum Type,"gr.uom.java.xmi.decomposition.replacement.VariableReplacementWithMethodInvocation.Direction",1,2,2,1,,0
+Package,"gr.uom.java.xmi.diff",,,1416,,,
+Public Class,"gr.uom.java.xmi.diff.AddAttributeAnnotationRefactoring",15,13,13,1,56,0
+Public Class,"gr.uom.java.xmi.diff.AddAttributeModifierRefactoring",14,13,13,1,58,0
+Public Class,"gr.uom.java.xmi.diff.AddClassAnnotationRefactoring",14,13,13,1,56,0
+Public Class,"gr.uom.java.xmi.diff.AddClassModifierRefactoring",13,13,13,1,58,0
+Public Class,"gr.uom.java.xmi.diff.AddMethodAnnotationRefactoring",13,13,13,1,56,0
+Public Class,"gr.uom.java.xmi.diff.AddMethodModifierRefactoring",12,13,13,1,58,0
+Public Class,"gr.uom.java.xmi.diff.AddParameterRefactoring",14,13,13,1,56,0
+Public Class,"gr.uom.java.xmi.diff.AddThrownExceptionTypeRefactoring",13,13,13,1,56,0
+Public Class,"gr.uom.java.xmi.diff.AddVariableAnnotationRefactoring",16,16,16,1,66,0
+Public Class,"gr.uom.java.xmi.diff.AddVariableModifierRefactoring",15,16,16,1,67,0
+Public Class,"gr.uom.java.xmi.diff.CallTree",5,3,3,1,33,0
+Public Class,"gr.uom.java.xmi.diff.CallTreeNode",7,11,11,1,67,0
+Public Class,"gr.uom.java.xmi.diff.CandidateAttributeRefactoring",8,18,18,1,81,0
+Public Class,"gr.uom.java.xmi.diff.CandidateExtractClassRefactoring",5,6,6,1,25,0
+Public Class,"gr.uom.java.xmi.diff.CandidateMergeVariableRefactoring",7,13,13,1,72,0
+Public Class,"gr.uom.java.xmi.diff.CandidateSplitVariableRefactoring",7,13,13,1,72,0
+Public Class,"gr.uom.java.xmi.diff.ChangeAttributeAccessModifierRefactoring",13,14,14,1,69,0
+Public Class,"gr.uom.java.xmi.diff.ChangeAttributeTypeRefactoring",14,17,17,1,74,0
+Public Class,"gr.uom.java.xmi.diff.ChangeClassAccessModifierRefactoring",13,14,14,1,62,0
+Public Class,"gr.uom.java.xmi.diff.ChangeOperationAccessModifierRefactoring",12,14,14,1,62,0
+Public Class,"gr.uom.java.xmi.diff.ChangeReturnTypeRefactoring",13,15,15,1,66,0
+Public Class,"gr.uom.java.xmi.diff.ChangeThrownExceptionTypeRefactoring",13,14,14,1,58,0
+Public Class,"gr.uom.java.xmi.diff.ChangeTypeDeclarationKindRefactoring",13,14,14,1,62,0
+Public Class,"gr.uom.java.xmi.diff.ChangeVariableTypeRefactoring",16,18,18,1,74,0
+Public Class,"gr.uom.java.xmi.diff.ClassMoveComparator",5,1,1,1,0,0
+Public Class,"gr.uom.java.xmi.diff.ClassRenameComparator",5,1,1,1,0,0
+Public Class,"gr.uom.java.xmi.diff.CodeRange",9,19,18,1,82,0
+Public Class,"gr.uom.java.xmi.diff.CollapseHierarchyRefactoring",13,12,12,1,50,0
+Public Class,"gr.uom.java.xmi.diff.ConvertAnonymousClassToTypeRefactoring",14,10,10,1,60,0
+Public Class,"gr.uom.java.xmi.diff.EncapsulateAttributeRefactoring",14,14,14,1,69,0
+Public Class,"gr.uom.java.xmi.diff.ExtractAttributeRefactoring",16,17,17,1,78,0
+Public Class,"gr.uom.java.xmi.diff.ExtractClassRefactoring",16,13,13,1,72,0
+Public Class,"gr.uom.java.xmi.diff.ExtractOperationDetection",31,16,12,1,80,0
+Public Class,"gr.uom.java.xmi.diff.ExtractOperationRefactoring",18,24,24,1,79,0
+Public Class,"gr.uom.java.xmi.diff.ExtractSuperclassRefactoring",13,11,11,1,50,0
+Public Class,"gr.uom.java.xmi.diff.ExtractVariableRefactoring",16,17,17,1,72,0
+Public Class,"gr.uom.java.xmi.diff.InheritanceDetection",10,4,4,1,25,0
+Public Class,"gr.uom.java.xmi.diff.InlineOperationDetection",22,8,8,1,66,0
+Public Class,"gr.uom.java.xmi.diff.InlineOperationRefactoring",18,22,22,1,82,0
+Public Class,"gr.uom.java.xmi.diff.InlineVariableRefactoring",16,17,17,1,72,0
+Public Class,"gr.uom.java.xmi.diff.MergeAttributeRefactoring",14,16,16,1,73,0
+Public Class,"gr.uom.java.xmi.diff.MergeClassRefactoring",18,17,17,1,41,0
+Public Class,"gr.uom.java.xmi.diff.MergePackageRefactoring",17,10,10,1,56,0
+Public Class,"gr.uom.java.xmi.diff.MergeVariableRefactoring",15,17,17,1,71,0
+Public Class,"gr.uom.java.xmi.diff.ModifyAttributeAnnotationRefactoring",15,14,14,1,58,0
+Public Class,"gr.uom.java.xmi.diff.ModifyClassAnnotationRefactoring",14,14,14,1,58,0
+Public Class,"gr.uom.java.xmi.diff.ModifyMethodAnnotationRefactoring",13,14,14,1,58,0
+Public Class,"gr.uom.java.xmi.diff.ModifyVariableAnnotationRefactoring",16,17,17,1,68,0
+Public Class,"gr.uom.java.xmi.diff.MoveAndRenameAttributeRefactoring",9,22,6,2,66,0
+Public Class,"gr.uom.java.xmi.diff.MoveAndRenameClassRefactoring",15,15,15,1,60,0
+Public Class,"gr.uom.java.xmi.diff.MoveAttributeRefactoring",12,16,16,1,68,4
+Public Class,"gr.uom.java.xmi.diff.MoveClassRefactoring",15,15,15,1,46,0
+Public Class,"gr.uom.java.xmi.diff.MoveOperationRefactoring",16,19,19,1,65,2
+Public Class,"gr.uom.java.xmi.diff.MoveSourceFolderRefactoring",17,14,14,1,69,0
+Public Class,"gr.uom.java.xmi.diff.MovedClassToAnotherSourceFolder",4,6,6,1,58,0
+Public Interface,"gr.uom.java.xmi.diff.PackageLevelRefactoring",3,13,5,3,0,3
+Public Class,"gr.uom.java.xmi.diff.PullUpAttributeRefactoring",8,20,4,2,0,0
+Public Class,"gr.uom.java.xmi.diff.PullUpOperationRefactoring",7,23,4,2,0,0
+Public Class,"gr.uom.java.xmi.diff.PushDownAttributeRefactoring",8,20,4,2,0,0
+Public Class,"gr.uom.java.xmi.diff.PushDownOperationRefactoring",7,23,4,2,0,0
+Public Class,"gr.uom.java.xmi.diff.RemoveAttributeAnnotationRefactoring",15,13,13,1,56,0
+Public Class,"gr.uom.java.xmi.diff.RemoveAttributeModifierRefactoring",14,13,13,1,58,0
+Public Class,"gr.uom.java.xmi.diff.RemoveClassAnnotationRefactoring",14,13,13,1,56,0
+Public Class,"gr.uom.java.xmi.diff.RemoveClassModifierRefactoring",13,13,13,1,58,0
+Public Class,"gr.uom.java.xmi.diff.RemoveMethodAnnotationRefactoring",13,13,13,1,56,0
+Public Class,"gr.uom.java.xmi.diff.RemoveMethodModifierRefactoring",12,13,13,1,58,0
+Public Class,"gr.uom.java.xmi.diff.RemoveParameterRefactoring",14,13,13,1,56,0
+Public Class,"gr.uom.java.xmi.diff.RemoveThrownExceptionTypeRefactoring",13,13,13,1,56,0
+Public Class,"gr.uom.java.xmi.diff.RemoveVariableAnnotationRefactoring",16,16,16,1,66,0
+Public Class,"gr.uom.java.xmi.diff.RemoveVariableModifierRefactoring",15,16,16,1,67,0
+Public Class,"gr.uom.java.xmi.diff.RenameAttributeRefactoring",13,15,15,1,69,0
+Public Class,"gr.uom.java.xmi.diff.RenameClassRefactoring",13,14,14,1,50,0
+Public Class,"gr.uom.java.xmi.diff.RenameOperationRefactoring",16,20,19,1,74,0
+Public Class,"gr.uom.java.xmi.diff.RenamePackageRefactoring",15,14,14,1,46,0
+Public Class,"gr.uom.java.xmi.diff.RenamePattern",1,7,7,1,14,0
+Public Class,"gr.uom.java.xmi.diff.RenameVariableRefactoring",15,16,16,1,69,0
+Public Class,"gr.uom.java.xmi.diff.ReorderParameterRefactoring",14,14,14,1,58,0
+Public Class,"gr.uom.java.xmi.diff.ReplaceAnonymousWithLambdaRefactoring",18,15,15,1,61,0
+Public Class,"gr.uom.java.xmi.diff.ReplaceAttributeRefactoring",9,22,6,2,66,0
+Public Class,"gr.uom.java.xmi.diff.ReplaceLoopWithPipelineRefactoring",15,14,14,1,58,0
+Public Class,"gr.uom.java.xmi.diff.SplitAttributeRefactoring",14,16,16,1,72,0
+Public Class,"gr.uom.java.xmi.diff.SplitPackageRefactoring",17,13,13,1,58,0
+Public Class,"gr.uom.java.xmi.diff.SplitVariableRefactoring",15,17,17,1,71,0
+Public Class,"gr.uom.java.xmi.diff.StringDistance",11,4,0,1,0,0
+Public Abstract Class,"gr.uom.java.xmi.diff.UMLAbstractClassDiff",16,15,15,1,76,2
+Public Class,"gr.uom.java.xmi.diff.UMLAnnotationDiff",8,4,4,1,50,0
+Public Class,"gr.uom.java.xmi.diff.UMLAnnotationListDiff",5,5,5,1,40,0
+Public Class,"gr.uom.java.xmi.diff.UMLAnonymousClassDiff",18,24,9,2,55,0
+Public Class,"gr.uom.java.xmi.diff.UMLAttributeDiff",32,22,22,1,81,0
+Public Abstract Class,"gr.uom.java.xmi.diff.UMLClassBaseDiff",68,120,103,2,95,3
+Public Class,"gr.uom.java.xmi.diff.UMLClassDiff",18,134,14,3,78,0
+Public Class,"gr.uom.java.xmi.diff.UMLClassMergeDiff",3,3,3,1,0,0
+Public Class,"gr.uom.java.xmi.diff.UMLClassMoveDiff",5,125,5,3,60,0
+Public Class,"gr.uom.java.xmi.diff.UMLClassRenameDiff",5,124,4,3,50,0
+Public Class,"gr.uom.java.xmi.diff.UMLEnumConstantDiff",13,8,8,1,50,0
+Public Class,"gr.uom.java.xmi.diff.UMLGeneralizationDiff",4,5,5,1,40,0
+Public Class,"gr.uom.java.xmi.diff.UMLModelDiff",107,121,120,1,93,0
+Public Class,"gr.uom.java.xmi.diff.UMLOperationDiff",37,17,17,1,78,0
+Public Class,"gr.uom.java.xmi.diff.UMLParameterDiff",25,11,11,1,67,0
+Public Class,"gr.uom.java.xmi.diff.UMLRealizationDiff",4,3,3,1,16,0
+Package,"org",,,0,,,
+Package,"org.kohsuke",,,0,,,
+Package,"org.kohsuke.github",,,5,,,
+Public Class,"org.kohsuke.github.GHRepositoryWrapper",7,3,3,1,0,0
+Public Class,"org.kohsuke.github.GHRepositoryWrapperTest",10,2,2,1,50,0
+Package,"org.refactoringminer",,,20,,,
+Public Class,"org.refactoringminer.RefactoringMiner",16,16,0,1,68,0
+Anonymous Class,"org.refactoringminer.RefactoringMiner.detectAll.(Anon_1)",5,7,3,2,66,0
+Anonymous Class,"org.refactoringminer.RefactoringMiner.detectAtCommit.(Anon_4)",5,6,2,2,0,0
+Anonymous Class,"org.refactoringminer.RefactoringMiner.detectAtGitHubCommit.(Anon_5)",5,6,2,2,0,0
+Anonymous Class,"org.refactoringminer.RefactoringMiner.detectAtGitHubPullRequest.(Anon_6)",5,6,2,2,50,0
+Anonymous Class,"org.refactoringminer.RefactoringMiner.detectBetweenCommits.(Anon_2)",5,7,3,2,66,0
+Anonymous Class,"org.refactoringminer.RefactoringMiner.detectBetweenTags.(Anon_3)",5,7,3,2,66,0
+Public Class,"org.refactoringminer.RefactoringMinerHttpServer",22,4,0,1,0,0
+Static Class,"org.refactoringminer.RefactoringMinerHttpServer.MyHandler",13,1,1,1,0,0
+Anonymous Class,"org.refactoringminer.RefactoringMinerHttpServer.MyHandler.handle.(Anon_1)",4,5,1,2,0,0
+Public Class,"org.refactoringminer.RefactoringMinerHttpsServer",26,4,0,1,0,0
+Static Class,"org.refactoringminer.RefactoringMinerHttpsServer.MyHandler",13,1,1,1,0,0
+Anonymous Class,"org.refactoringminer.RefactoringMinerHttpsServer.MyHandler.handle.(Anon_2)",4,5,1,2,0,0
+Anonymous Class,"org.refactoringminer.RefactoringMinerHttpsServer.main.(Anon_1)",5,1,1,2,0,0
+Package,"org.refactoringminer.api",,,46,,,
+Public Class,"org.refactoringminer.api.Churn",0,4,4,1,25,0
+Public Interface,"org.refactoringminer.api.CodeRangeProvider",1,2,2,0,0,1
+Public Interface,"org.refactoringminer.api.GitHistoryRefactoringMiner",5,10,10,0,0,1
+Public Interface,"org.refactoringminer.api.GitService",9,12,12,0,0,1
+Public Interface,"org.refactoringminer.api.Refactoring",5,8,6,2,0,60
+Public Abstract Class,"org.refactoringminer.api.RefactoringHandler",4,4,4,1,0,10
+Public Class,"org.refactoringminer.api.RefactoringMinerTimedOutException",0,0,0,2,0,0
+Public Enum Type,"org.refactoringminer.api.RefactoringType",9,13,8,1,,0
+Package,"org.refactoringminer.rm1",,,35,,,
+Public Class,"org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl",74,31,25,1,95,0
+Public Static Class,"org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.ChangedFileInfo",3,6,6,1,66,0
+Anonymous Class,"org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectAll.(Anon_1)",4,18,1,2,0,0
+Anonymous Class,"org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectBetweenCommits.(Anon_4)",4,18,1,2,0,0
+Anonymous Class,"org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.detectBetweenTags.(Anon_3)",4,18,1,2,0,0
+Anonymous Class,"org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl.fetchAndDetectNew.(Anon_2)",4,18,1,2,0,0
+Package,"org.refactoringminer.test",,,35,,,
+Public Class,"org.refactoringminer.test.RefactoringPopulator",23,9,0,1,0,0
+Public Static Class,"org.refactoringminer.test.RefactoringPopulator.Comment",1,0,0,1,0,0
+Public Static Class,"org.refactoringminer.test.RefactoringPopulator.Refactoring",1,0,0,1,0,0
+Public Enum Type,"org.refactoringminer.test.RefactoringPopulator.Refactorings",2,4,4,1,,0
+Public Static Class,"org.refactoringminer.test.RefactoringPopulator.Root",2,0,0,1,0,0
+Public Enum Type,"org.refactoringminer.test.RefactoringPopulator.Systems",1,4,4,1,,0
+Public Static Class,"org.refactoringminer.test.RefactoringPopulator.Tuple",0,0,0,1,0,0
+Public Class,"org.refactoringminer.test.TestAllRefactorings",7,1,1,1,0,0
+Public Class,"org.refactoringminer.test.TestBuilder",22,13,12,1,83,0
+Private Static Class,"org.refactoringminer.test.TestBuilder.Counter",0,0,0,1,0,0
+Public Class,"org.refactoringminer.test.TestBuilder.ProjectMatcher",16,13,9,2,79,0
+Public Class,"org.refactoringminer.test.TestBuilder.ProjectMatcher.CommitMatcher",5,5,5,1,85,0
+Package,"org.refactoringminer.util",,,27,,,
+Public Class,"org.refactoringminer.util.AstUtils",16,14,1,1,0,0
+Private Static Class,"org.refactoringminer.util.AstUtils.StatementCounter",5,2,2,2,0,0
+Class,"org.refactoringminer.util.ExternalProcess",9,2,0,1,0,0
+Private Static Class,"org.refactoringminer.util.ExternalProcess.StreamGobbler",7,3,3,1,33,0
+Public Class,"org.refactoringminer.util.GitServiceImpl",42,17,17,1,82,4
+Private Class,"org.refactoringminer.util.GitServiceImpl.DefaultCommitsFilter",5,4,4,2,0,0
+Public Class,"org.refactoringminer.util.PrefixSuffixUtils",1,4,0,1,0,0
+Package,"org.refactoringminer.utils",,,83,,,
+Abstract Class,"org.refactoringminer.utils.EntityParser",2,1,1,1,0,3
+Public Class,"org.refactoringminer.utils.RefFinderResultReader",16,10,0,1,90,0
+Anonymous Class,"org.refactoringminer.utils.RefFinderResultReader.member.(Anon_2)",4,2,1,2,0,0
+Anonymous Class,"org.refactoringminer.utils.RefFinderResultReader.member.(Anon_3)",4,2,1,2,0,0
+Anonymous Class,"org.refactoringminer.utils.RefFinderResultReader.type.(Anon_1)",4,2,1,2,0,0
+Public Class,"org.refactoringminer.utils.RefactoringCollector",19,8,4,2,37,0
+Public Class,"org.refactoringminer.utils.RefactoringCrawlerRefactoring",7,6,6,1,33,0
+Public Class,"org.refactoringminer.utils.RefactoringCrawlerResultReader",15,4,0,1,0,0
+Public Class,"org.refactoringminer.utils.RefactoringRelationship",7,15,11,1,48,0
+Public Static Class,"org.refactoringminer.utils.RefactoringRelationship.GroupKey",3,5,5,1,0,0
+Public Class,"org.refactoringminer.utils.RefactoringRelationshipGroup",7,6,6,1,33,0
+Public Class,"org.refactoringminer.utils.RefactoringSet",18,14,13,1,64,0
+Public Class,"org.refactoringminer.utils.ResultComparator",24,29,24,1,89,0
+Public Static Class,"org.refactoringminer.utils.ResultComparator.CompareResult",3,10,10,1,40,0
