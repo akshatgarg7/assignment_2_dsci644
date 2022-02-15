@@ -48,11 +48,86 @@ class InventoryTest {
 
     @Test
     public void testAddChocException(){
-        Inventory inventory = new Inventory();
-        String chocAdd = "a";
         try {
+            Inventory inventory = new Inventory();
+            String chocAdd = "a";
             inventory.addChocolate(chocAdd);
             fail("Units of chocolate must be a integer");
+        } catch (InventoryException e) {
+            //success if caught
+        }
+    }
+
+    @Test
+    public void testAddChocNeg(){
+        try {
+            Inventory inventory = new Inventory();
+            String chocAdd = "-5";
+            inventory.addChocolate(chocAdd);
+            fail("Units of chocolate must be a positive integer");
+        } catch (InventoryException e) {
+            //success if caught
+        }
+    }
+
+    @Test
+    public void testDefaultGetCoffee(){
+        Inventory inventory = new Inventory();
+        int coffeeDefault = 15;
+        int actual = inventory.getCoffee();
+        assertEquals(coffeeDefault,actual);
+    }
+
+    @Test
+    public void testSetCoffee(){
+        Inventory inventory = new Inventory();
+        int coffeeSet = 50;
+        inventory.setCoffee(coffeeSet);
+        int actual = inventory.getCoffee();
+        assertEquals(coffeeSet,actual);
+    }
+
+    @Test
+    public void testSetCoffeeLess(){
+        Inventory inventory = new Inventory();
+        int coffeeSet = -5;
+        inventory.setCoffee(coffeeSet);
+        int actual = inventory.getCoffee();
+        assertEquals(15,actual);
+    }
+
+    @Test
+    public void testAddCoffee(){
+        try {
+            Inventory inventory = new Inventory();
+            String coffeeAdd = "50";
+            inventory.addCoffee(coffeeAdd);
+            int actual = inventory.getCoffee();
+            assertEquals(65,actual);
+        } catch (InventoryException e) {
+            fail("Something very wrong happened with code!");
+        }
+    }
+
+    @Test
+    public void testAddCoffeeException(){
+        try {
+            Inventory inventory = new Inventory();
+            String coffeeAdd = "a";
+            inventory.addCoffee(coffeeAdd);
+            fail("Units of coffee must be a integer");
+        } catch (InventoryException e) {
+            //success if caught
+        }
+    }
+
+    @Test
+    public void testAddCoffeeNeg(){
+        try {
+            Inventory inventory = new Inventory();
+            String coffeeAdd = "-5";
+            inventory.addCoffee(coffeeAdd);
+            fail("Units of chocolate must be a positive integer");
         } catch (InventoryException e) {
             //success if caught
         }
