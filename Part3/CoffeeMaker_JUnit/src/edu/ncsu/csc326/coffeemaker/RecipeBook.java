@@ -1,5 +1,7 @@
 package edu.ncsu.csc326.coffeemaker;
 
+import edu.ncsu.csc326.coffeemaker.exceptions.RecipeException;
+
 public class RecipeBook {
 	
 	/** Array of recipes in coffee maker*/
@@ -55,6 +57,9 @@ public class RecipeBook {
 	 * @return String
 	 */
 	public synchronized String deleteRecipe(int recipeToDelete) {
+		if(recipeToDelete > NUM_RECIPES){
+			throw new ArrayIndexOutOfBoundsException("RecipeBook only holds upto 4 recipes");
+		}
 		if (recipeArray[recipeToDelete] != null) {
 			String recipeName = recipeArray[recipeToDelete].getName();
 			recipeArray[recipeToDelete] = new Recipe();
@@ -72,6 +77,9 @@ public class RecipeBook {
 	 * @return String
 	 */
 	public synchronized String editRecipe(int recipeToEdit, Recipe newRecipe) {
+		if(recipeToEdit > NUM_RECIPES){
+			throw new ArrayIndexOutOfBoundsException("RecipeBook only holds upto 4 recipes");
+		}
 		if (recipeArray[recipeToEdit] != null) {
 			String recipeName = recipeArray[recipeToEdit].getName();
 			newRecipe.setName("");
