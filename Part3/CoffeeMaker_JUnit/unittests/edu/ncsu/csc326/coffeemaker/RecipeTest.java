@@ -331,4 +331,17 @@ class RecipeTest {
         obj.setName(null);
         assertTrue(recipe.equals(obj));
     }
+
+
+    @Test
+    public void testHashCode(){
+        try {
+            int expectedValue=31;
+            Recipe recipe = new Recipe();
+            int actualValue=recipe.hashCode();
+            assertEquals(expectedValue, actualValue);
+        } catch (Exception exception) {
+            assertFalse(false);
+        }
+    }
 }
