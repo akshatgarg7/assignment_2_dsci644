@@ -43,7 +43,6 @@ public class Inventory {
     	if(chocolate >= 0) {
     		Inventory.chocolate = chocolate;
     	}
-        
     }
     
     /**

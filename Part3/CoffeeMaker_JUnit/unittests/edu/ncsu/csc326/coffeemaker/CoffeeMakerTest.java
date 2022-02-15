@@ -2,6 +2,7 @@ package edu.ncsu.csc326.coffeemaker;
 
 import edu.ncsu.csc326.coffeemaker.exceptions.InventoryException;
 import junit.framework.TestCase;
+import org.junit.jupiter.api.Test;
 
 /**
  * 
@@ -79,6 +80,11 @@ public class CoffeeMakerTest extends TestCase {
 	public void testMakeCoffee() {
 		cm.addRecipe(r1);
 		assertEquals(25, cm.makeCoffee(0, 75));
+	}
+
+	@Test
+	public void testAddRecipe(){
+
 	}
 
 }
